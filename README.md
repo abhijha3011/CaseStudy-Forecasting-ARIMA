@@ -30,14 +30,24 @@ approach to re-train the model with actual data as it gets available for further
 models are not time consuming, walk-forward validation is the most preferred solution to get most accurate results.
 # walk-forward validation
 history = [x for x in train]
+
 predictions = list()
+
 for i in range(len(test)):
+
     yhat = history[-1]
+    
     predictions.append(yhat)
+    
 # observation
     obs = test[i]
+    
     history.append(obs)
+    
     print('>Predicted=%.3f, Expected=%.3f' % (yhat, obs))
+    
 # report performance
+
 rmse = sqrt(mean_squared_error(test, predictions))
+
 print('RMSE: %.3f' % rmse)
