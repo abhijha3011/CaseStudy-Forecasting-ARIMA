@@ -1,18 +1,22 @@
 # CaseStudy-Forecasting-ARIMA
 Time Series analysis on monthly "Sales" data. Here, we created a Time series model by using ARIMA and forecasted next 12 days sales amount.
-Data Set --> forecasting_data.xlsx.
+#Data Set --> forecasting_data.xlsx.
+
 It has the following columns:
+
 amt: Amount spend on Logistics each month from May 2015 to Mar 2018
 year.mon: A date column representing the month and year of the observation
 log.amt: The logarithmic values of ‘amt’. This is the target variable
 predicted: The fitted valued of a particular model, which also provides the forecast for 12 future periods ending in March 2019.
 Lower CI: Lower confidence interval of prediction 
 Upper CI: Upper confidence interval of predictions
-Software used: Python, Jupyter Notebook
+
+#Software used: Python, Jupyter Notebook
 Version: 3.8.3__
 Packages/libraries used: Pandas(1.0.5),matplotlib(3.2.2),numpy(1.18.5),scipy(1.5)
 
-Model Used: ARMA. In fact, the AR and MA components are identical, combining a general 
+#Model Used: 
+ARMA. In fact, the AR and MA components are identical, combining a general 
 autoregressive model AR(p) and general moving average model MA(q). AR(p) makes predictions using previous values 
 of the dependent variable. MA(q) makes predictions using the series mean and previous errors.
 An ARMA model is a stationary model; If your model isn’t stationary, then you can achieve stationarity by taking a series of differences. 
